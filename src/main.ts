@@ -5,12 +5,25 @@ import App from './App.vue'
 import { Tab, Tabs, Cell } from 'vant'
 import 'vant/lib/index.css'
 import './style.css'
-
+import "./basic"
 const app = createApp(App)
 // 注册vant组件
 app.use(Tab)
 app.use(Tabs)
 app.use(Cell)
+
+  
+  
+
+  
+
+
+  
+  
+
+
+
+
 
 app.mount('#app')
 

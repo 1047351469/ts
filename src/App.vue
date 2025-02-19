@@ -33,6 +33,11 @@ const tabChange = (id: number) => {
   channelId.value = id
 }
 console.log(ChannelType.NEWS)
+enum UserRole {
+  Admin = 'admin',
+  User = 'user',
+  Guest = 'guest'
+}
 </script>
 
 <template>
@@ -40,7 +45,7 @@ console.log(ChannelType.NEWS)
   <van-tabs @change="tabChange">
     <van-tab  v-for="item in channelList" :key="item.id" :title="item.name">
       <!-- 文章列表 -->
-      <List :channelType="ChannelType.NEWS" :arr="[1,2]" :channel-id="channelId" @click="(num:number)=>console.log(num)" />
+      <List :users="[{age:1}]" :role="UserRole.Admin" :user="{id:1,name:'cai'}" :isActive="1" :channelType="1" :arr="[1,2]" :channel-id="channelId" @click="(num:number)=>console.log(num)" />
     </van-tab>
   </van-tabs>
 

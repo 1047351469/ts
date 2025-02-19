@@ -4,12 +4,24 @@ import { onMounted, ref,toRefs,PropType } from 'vue'
 
 import type { ArticleItem, ArticleResData,ChannelType } from '../types/data'
 // 定义组件props类型
-
+enum UserRole {
+  Admin = 'admin',
+  User = 'user',
+  Guest = 'guest'
+}
+type User = {
+  id: number;
+  name: string;
+};
 type Props = {
+  // number string boolean [] object
   channelId: number,
   isActive?: boolean,
   arr?: number[] ,
   channelType:ChannelType,
+  user:User,
+  role: UserRole;
+  users: User[]
   
 }
 // withDefaults默认值
